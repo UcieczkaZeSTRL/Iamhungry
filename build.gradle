@@ -19,14 +19,50 @@ repositories {
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
+    compile 'org.apache.httpcomponents:httpclient:4.5.2'
+    compile 'org.apache.commons:commons-lang3:3.5'
+    compile 'org.liquibase:liquibase-core:3.5.3'
+
+
     compile 'org.apache.logging.log4j:log4j-api:2.8.2'
     compile 'org.apache.logging.log4j:log4j-core:2.8.2'
     // The production code uses the SLF4J logging API at compile time
     compile 'org.slf4j:slf4j-api:1.7.21'
 
-    // Declare the dependency for your favourite test framework you want to use in your tests.
-    // TestNG is also supported by the Gradle Test task. Just change the
-    // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
-    // 'test.useTestNG()' to your build script.
+    // Servlets API
+    compile 'javax.servlet:javax.servlet-api:3.1.0'
+    compile 'javax.servlet.jsp:javax.servlet.jsp-api:2.3.1'
+
+    // Hibernate
+    compile 'org.hibernate:hibernate-core:5.2.10.Final'
+    compile 'org.hibernate:hibernate-entitymanager:5.2.10.Final'
+    compile 'org.hibernate:hibernate-jpamodelgen:5.2.10.Final'
+
+    // CDI
+    compile 'javax.enterprise:cdi-api:2.0-PFD2'
+    compile 'org.hibernate:hibernate-validator-cdi:5.4.1.Final'
+
+    // Spring
+    compile 'org.springframework:spring-core:4.3.8.RELEASE'
+    compile 'org.springframework:spring-context:4.3.8.RELEASE'
+    compile 'org.springframework:spring-aop:4.3.8.RELEASE'
+    compile 'org.springframework:spring-beans:4.3.8.RELEASE'
+    compile 'org.springframework:spring-expression:4.3.8.RELEASE'
+    compile 'org.springframework:spring-tx:4.3.8.RELEASE'
+
+    // Spring Web
+    compile 'org.springframework:spring-web:4.3.8.RELEASE'
+    compile 'org.springframework:spring-webmvc:4.3.8.RELEASE'
+
+    // JSF
+    // compile 'com.sun.faces:jsf-impl:2.2.14'
+
+    // ICEfaces - implementacja JSF
+    compile 'org.icefaces:icefaces:4.2.0'
+    compile 'org.icefaces:icefaces-ace:4.2.0'
+
+
+    compile group: 'org.hibernate', name: 'hibernate-testing', version: '5.2.10.Final'
+
     testCompile 'junit:junit:4.12'
 }
